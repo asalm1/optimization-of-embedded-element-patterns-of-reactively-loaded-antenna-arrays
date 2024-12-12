@@ -1,5 +1,7 @@
 # Optimization of Embedded Element Patterns of Reactively Loaded Antenna Arrays
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14412066.svg)](https://doi.org/10.5281/zenodo.14412066)
+
 This repository contains MATLAB codes and data for reproducing the results of the research paper 
 
 > A. Salmi, M. Capek, L. Jelinek, A. Lehtovuori, and V. Viikari, "Optimization of Embedded Element Patterns of Reactively Loaded Antenna Arrays," in *Transactions on Antennas and Propagation*, 2024 [Submitted].
