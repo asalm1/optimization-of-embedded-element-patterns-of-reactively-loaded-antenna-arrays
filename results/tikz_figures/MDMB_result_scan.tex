@@ -1,0 +1,73 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\documentclass[tikz]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\usepackage{grffile}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{arrows.meta}
+\usepgfplotslibrary{patchplots}
+\usepackage{amsmath}
+
+\begin{document}
+\definecolor{mycolor1}{rgb}{0.00000,1.00000,1.00000}%
+\definecolor{mycolor2}{rgb}{1.00000,0.00000,1.00000}%
+\definecolor{mycolor3}{rgb}{1.00000,1.00000,0.00000}%
+\definecolor{mycolor4}{rgb}{0.85098,0.85098,0.85098}%
+\definecolor{mycolor5}{rgb}{0.07059,0.07059,0.07059}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.458in,
+height=5.433in,
+at={(1.083in,0.733in)},
+scale only axis,
+xmin=-90,
+xmax=90,
+xlabel style={font=\color{mycolor4}},
+xlabel={$\theta$},
+ymin=-40,
+ymax=20,
+ylabel style={font=\color{mycolor4}},
+ylabel={Realized gain (dB)},
+axis background/.style={fill=mycolor5},
+title style={font=\bfseries\color{mycolor4}},
+title={Manopt best result and bound, $\varphi = $0$^{\circ}$},
+xmajorgrids,
+ymajorgrids,
+legend style={at={(0.5,0.03)}, anchor=south, legend cell align=left, align=left}
+]
+\addplot [color=red, line width=2.0pt, mark size=2.0pt, mark=x, mark options={solid, red}]
+  table[]{MDMB_result_scan-1.tsv};
+\addlegendentry{Bound}
+
+\addplot [color=blue, line width=2.0pt]
+  table[]{MDMB_result_scan-2.tsv};
+\addlegendentry{Scan gain envelope}
+
+\addplot [color=mycolor1, line width=1.0pt]
+  table[]{MDMB_result_scan-3.tsv};
+\addlegendentry{Array gain, $\theta_0 = -10^{\circ}$}
+
+\addplot [color=mycolor2, line width=1.0pt]
+  table[]{MDMB_result_scan-4.tsv};
+\addlegendentry{Array gain, $\theta_0 = 0^{\circ}$}
+
+\addplot [color=mycolor3, line width=1.0pt]
+  table[]{MDMB_result_scan-5.tsv};
+\addlegendentry{Array gain, $\theta_0 = 1.500000e+01^{\circ}$}
+
+\addplot [color=black, line width=2.0pt, mark size=1.5pt, mark=o, mark options={solid, black}]
+  table[]{MDMB_result_scan-6.tsv};
+\addlegendentry{Target}
+
+\end{axis}
+\end{tikzpicture}%
+\end{document}

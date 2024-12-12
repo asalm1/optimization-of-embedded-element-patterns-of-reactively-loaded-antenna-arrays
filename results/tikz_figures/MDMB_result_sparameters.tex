@@ -1,0 +1,67 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\documentclass[tikz]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\usepackage{grffile}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{arrows.meta}
+\usepgfplotslibrary{patchplots}
+\usepackage{amsmath}
+
+\begin{document}
+\definecolor{mycolor1}{rgb}{0.00000,0.44700,0.74100}%
+\definecolor{mycolor2}{rgb}{0.85000,0.32500,0.09800}%
+\definecolor{mycolor3}{rgb}{0.92900,0.69400,0.12500}%
+\definecolor{mycolor4}{rgb}{0.49400,0.18400,0.55600}%
+\definecolor{mycolor5}{rgb}{0.46600,0.67400,0.18800}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=4.521in,
+height=3.566in,
+at={(0.758in,0.481in)},
+scale only axis,
+xmin=4,
+xmax=6,
+xlabel style={font=\color{white!15!black}},
+xlabel={Frequency (GHz)},
+ymin=-25,
+ymax=0,
+ylabel style={font=\color{white!15!black}},
+ylabel={$|s_{ii}|$ (dB)},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left, draw=white!15!black}
+]
+\addplot [color=mycolor1, line width=2.0pt]
+  table[]{MDMB_result_sparameters-1.tsv};
+\addlegendentry{$s_{11}$}
+
+\addplot [color=mycolor2, line width=2.0pt]
+  table[]{MDMB_result_sparameters-2.tsv};
+\addlegendentry{$s_{22}$}
+
+\addplot [color=mycolor3, line width=2.0pt]
+  table[]{MDMB_result_sparameters-3.tsv};
+\addlegendentry{$s_{33}$}
+
+\addplot [color=mycolor4, line width=2.0pt]
+  table[]{MDMB_result_sparameters-4.tsv};
+\addlegendentry{$s_{44}$}
+
+\addplot [color=mycolor5, line width=2.0pt]
+  table[]{MDMB_result_sparameters-5.tsv};
+\addlegendentry{$s_{55}$}
+
+\end{axis}
+\end{tikzpicture}%
+\end{document}
